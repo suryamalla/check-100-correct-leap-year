@@ -1,31 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-   <p>Enter the year to check leap or not:</p> <input type="number" id="year">
-   <button value="check" onclick="leap()">submit</button>
-   <script>
-       function leap(){
-        let year=document.getElementById('year').value;
+
+    <link rel = "stylesheet" href = "style.css">
+  
+
+ <div id = "digital-clock"> </div>
+ <script src = "leap_year.js"> </script>
+
+    <!-- <p style="color: red; font-family: Georgia, 'Times New Roman', Times, serif; font-size: larger;">watch</p>
+
+    <div id="time" style="height: 200px; width: 400px; border: 2px solid red;"></div>
+ -->
+
+
+    <script>
+//         function showtime() {
+
+//             let a = new Date();
+//          let date1= a.getFullYear();
+//          let date2= a.getMonth()+1;
+//          let date3 =a.getDate()
+//             let h = a.getHours();
+//             let m = a.getMinutes();
+//             let s = a.getSeconds();
+             
        
-       if(year%4==0){
-        if((year%100!=0)||(year%400==0)){
-            document.write('this is leap year');
-        }else{
-            document.write("not a leap year");
+//             //   let  t = h + ":" + m + ":" + s;
+//             // time1.textContent = h + ":" + m + ":" + s;
+             
+//  document.getElementById("time").innerText = h + " : " + m + " : " + s +" on " + date1 +" / "+ date2 +" / "+ date3 ;
+//  // Set Timer to 1 sec (1000 ms)
+//  setTimeout(showtime, 1000);
+
+//         }
+
+
+//         showtime();
+ 
+ 
+  
+
+    </script>
+
+<div id="digital-clock">
+    <p >year to check leap or not:</p> <input type="number" id="year digital-clock" placeholder="Enter the year" style="width: 200px;height: 50px;"> 
+<br><center><button value="check" onclick="leap()">submit</button></center>
+    
+
+</div>
+
+    <script>
+
+
+
+
+
+        function leap() {
+            let year = document.getElementById('year').value;
+
+            if (year % 4 == 0) {
+                if ((year % 100 != 0) || (year % 400 == 0)) {
+                    document.write('this is leap year');
+
+
+                } else {
+                    document.write("not a leap year");
+                }
+
+            } else {
+                document.write("not a leap year");
+            }
+
         }
-        
-       }else{
-           document.write("not a leap year");
-       }
-       }
-      
-       
-   </script>
+
+
+    </script>
+
 </body>
+
 </html>
